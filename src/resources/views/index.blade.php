@@ -33,7 +33,7 @@
       <a href="https://www.github.com/mehmettunaselvi" target="_blank"
         ><i class="bx bxl-github"></i
       ></a>
-      <a href="https://www.tryhackme.com/p/mehmettunaselvi"
+      <a href="https://www.tryhackme.com/p/mehmettunaselvi" target="_blank"
         ><i class="bx bx-desktop"></i
       ></a>
     </div>
