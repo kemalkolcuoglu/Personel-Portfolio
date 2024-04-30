@@ -31,6 +31,15 @@
         <input type="text" class="form-control" id="title" name="title">
       </div>
       <div class="form-group">
+        <label for="title">Category</label>
+        <select id="category" name="category" class="form-control">
+          <option selected>Please Choose a Category...</option>
+          @foreach($categories as $category)
+          <option value="{{ $category['id'] }}">{{ $category['title'] }}</option>
+          @endforeach
+        </select>
+      </div>
+      <div class="form-group">
         <label for="seo_description">SEO Description</label>
         <input type="text" class="form-control" id="seo_description" name="seo_description">
       </div>

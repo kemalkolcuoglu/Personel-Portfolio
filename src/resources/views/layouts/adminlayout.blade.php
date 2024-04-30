@@ -38,6 +38,9 @@
               @endif
             @else
               <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin.categories') }}">Categories</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="{{ route('admin.index') }}">Blog Entries</a>
               </li>
               <li class="nav-item dropdown">
