@@ -41,3 +41,8 @@ Route::post('/admin/storeCategory/', [AdminController::class, 'storeCategory'])-
 Route::get('/admin/editCategory/{id}', [AdminController::class, 'editCategory'])->name('admin.editCategory')->middleware('auth');
 Route::put('/admin/updateCategory/{id}', [AdminController::class, 'updateCategory'])->name('admin.updateCategory')->middleware('auth');
 Route::delete('/admin/deleteCategory/{id}', [AdminController::class, 'deleteCategory'])->name('admin.deleteCategory')->middleware('auth');
+
+
+Route::get('/docpage/', function () {
+    return view('docpage');
+});
