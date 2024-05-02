@@ -33,3 +33,16 @@ Route::post('/admin/storePost/', [AdminController::class, 'storePost'])->name('a
 Route::get('/admin/editPost/{id}', [AdminController::class, 'editPost'])->name('admin.editPost')->middleware('auth');
 Route::put('/admin/updatePost/{id}', [AdminController::class, 'updatePost'])->name('admin.updatePost')->middleware('auth');
 Route::delete('/admin/deletePost/{id}', [AdminController::class, 'deletePost'])->name('admin.deletePost')->middleware('auth');
+
+
+Route::get('/admin/categories', [AdminController::class, 'categories'])->name('admin.categories')->middleware('auth');
+Route::get('/admin/addCategory/', [AdminController::class, 'addCategory'])->name('admin.addCategory')->middleware('auth');
+Route::post('/admin/storeCategory/', [AdminController::class, 'storeCategory'])->name('admin.storeCategory')->middleware('auth');
+Route::get('/admin/editCategory/{id}', [AdminController::class, 'editCategory'])->name('admin.editCategory')->middleware('auth');
+Route::put('/admin/updateCategory/{id}', [AdminController::class, 'updateCategory'])->name('admin.updateCategory')->middleware('auth');
+Route::delete('/admin/deleteCategory/{id}', [AdminController::class, 'deleteCategory'])->name('admin.deleteCategory')->middleware('auth');
+
+
+Route::get('/docpage/', function () {
+    return view('docpage');
+});

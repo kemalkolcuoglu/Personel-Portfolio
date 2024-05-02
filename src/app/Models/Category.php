@@ -5,23 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class BlogEntry extends Model
+class Category extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    public $timestamps = false;
 
     protected $fillable = [
         'title',
-        'seo_description',
-        'category',
-        'content',
+        'base_category',
         'is_active'
     ];
 
-    public function relatedCategory(): BelongsTo
+    public function relatedEntries(): HasMany
     {
-        return $this->belongsTo(Category::class);
+        return $this->hasMany(BlogEntry::class);
     }
 }

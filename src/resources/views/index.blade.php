@@ -1,19 +1,7 @@
 @extends('layouts.layout')
+@push('styles')
+@endpush
 @section('body')
-<header class="header">
-  <a href="#home" class="logo"
-    >Mehmet Tuna
-    <span>Selvi</span>
-  </a>
-
-  <i class="bx bx-menu" id="menu-icon"></i>
-  <nav class="navbar">
-    <a href="#home" class="active">Home</a>
-    <a href="#education" class="active">Experience</a>
-    <a href="#services" class="active">Blog</a>
-    <a href="#contact" class="active">Contact</a>
-  </nav>
-</header>
 <section class="home" id="home">
   <div class="home-content">
     <h1>Hey, It's <span>Tuna</span></h1>
@@ -48,7 +36,7 @@
     </div>
   </div>
   <div class="home-img">
-    <img src="/image.jpeg" alt="" />
+    <img src="/image_originial.jpeg" alt="" />
   </div>
 </section>
 <section class="education" id="education">

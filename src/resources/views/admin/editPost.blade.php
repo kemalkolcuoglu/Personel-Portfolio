@@ -24,12 +24,21 @@
 @endpush
 @section('content')
   <div class="container">
-    <form method="POST" action="{{ route('admin.storePost') }}" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('admin.updatePost', ['id' => $entry->id])}}" enctype="multipart/form-data">
       @csrf
       @method('PUT')
       <div class="form-group">
         <label for="title">Title</label>
         <input type="text" class="form-control" id="title" name="title" value="{{ $entry->title }}">
+      </div>
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" name="category" class="form-control">
+          <option>Please Choose a Category...</option>
+          @foreach($categories as $category)
+          <option value="{{ $category['id'] }}" {{ $entry->category == $category->id ? 'selected' : '' }}>{{ $category['title'] }}</option>
+          @endforeach
+        </select>
       </div>
       <div class="form-group">
         <label for="seo_description">SEO Description</label>

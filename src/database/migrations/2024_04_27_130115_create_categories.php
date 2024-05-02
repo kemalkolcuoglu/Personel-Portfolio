@@ -11,16 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('blog_entries', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->softDeletes();
-            $table->timestamps();
             $table->string('title', 128);
-            $table->string('seo_description', 128);
-            $table->unsignedBigInteger('category');
-            $table->string('content');
+            $table->unsignedBigInteger('base_category')->default(0);
             $table->boolean('is_active')->default(true);
-            $table->foreign('category')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 

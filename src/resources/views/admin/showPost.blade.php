@@ -4,6 +4,7 @@
     <div class="row justify-content-center">
       <div class="col-md-12">
         <h2>{{ $entry->title }}</h2>
+
         {!! $entry->content !!}
         <a class="btn btn-success" href="{{ route('admin.editPost', ['id' => $entry->id])}}">Edit</a>
         <a class="btn btn-danger" href="{{ route('admin.deletePost', ['id' => $entry->id]) }}"
