@@ -531,6 +531,11 @@ span {
   -ms-transform: scale(1.02);
   -o-transform: scale(1.02);
 }
+.service-info {
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
 
 .service-box .service-info {
   display: flex;
@@ -818,6 +823,7 @@ footer ul li a:hover {
 
 article {
   margin-top: 40px;
+  
 }
 
 
@@ -826,6 +832,7 @@ article {
   width: 100%;
   border-bottom: 2px solid var(--doc-main-color);
   display: inline;
+  
 }
 
 .doc-body #navbar-doc li {
@@ -901,7 +908,6 @@ ol {
   }
 
   .doc-body #navbar-doc {
-    margin-top: -35px;
     width: 300px;
     height: 100%;
     position: fixed;

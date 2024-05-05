@@ -1,4 +1,13 @@
 @extends('layouts.adminlayout')
+@push('styles')
+<!-- Highlight.js CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+@endpush
+@push('scripts')
+<!-- Highlight.js JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+@endpush
 @section('content')
   <div class="container">
     <div class="row justify-content-center">

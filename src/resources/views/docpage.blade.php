@@ -3,6 +3,11 @@
 <!-- Highlight.js CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
 @endpush
+@push('scripts')
+<!-- Highlight.js JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+@endpush
 @section('body')
 <div class="doc-body">
   <nav id="navbar-doc">
@@ -113,7 +118,5 @@
   </main>
 </div>
 
-<!-- Highlight.js JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+
 @endsection
