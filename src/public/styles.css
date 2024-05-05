@@ -18,7 +18,7 @@
   --doc-second-bg-color: #131313;
   --doc-text-color: white;
   --doc-main-color: #00ffee;
-  --doc-code-bg-color: #262626;
+  --doc-code-bg-color: #1d1f20;
 }
 
 html {
@@ -853,6 +853,8 @@ article {
 
 .doc-body p {
   max-width: 1200px;
+  line-height: 1.5;
+  font-weight: 500;
 }
 
 
@@ -886,6 +888,7 @@ ol {
   padding-right: 200px;
   margin: 10px;
   border-radius: 5px;
+  color: antiquewhite;
 }
 
 .image {
@@ -895,10 +898,6 @@ ol {
 @media only screen and (min-width: 720px) {
   .doc-body body {
     flex-direction: row;
-  }
-
-  .doc-body code {
-    margin-left: -90px;
   }
 
   .doc-body #navbar-doc {
@@ -918,6 +917,13 @@ ol {
     width: 70%;
     margin-left: 20px;
   }
+   .doc-body code {
+    padding: 0;
+    margin: 25px;
+    min-width: 350px;
+    width: 90%;
+    max-width: 800px;
+  }
 }
 
 @media only screen and (max-width: 720px) {
@@ -926,11 +932,16 @@ ol {
   }
 
   .doc-body code {
+    margin: -10px;
+    margin-bottom: 25px;
+    margin-top: 25px;
     padding: 0;
-    margin-left: -90px;
+    width: 100%;
   }
 }
 
 img {
   max-width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }

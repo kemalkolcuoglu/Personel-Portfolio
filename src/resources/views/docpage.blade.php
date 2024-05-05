@@ -1,5 +1,7 @@
 @extends('layouts.layout')
 @push('styles')
+<!-- Highlight.js CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
 @endpush
 @section('body')
 <div class="doc-body">
@@ -47,18 +49,15 @@
 
     <p> Here's a simple example of a Java main method: </p>
 
-    <pre>
-        <code>
-            public class MyFirstJavaProgram {
-                public static void main(String[] args) {
-                    System.out.println("Hello, Java!");
-                }
+    <pre><code class="java">
+        public class MyFirstJavaProgram {
+            public static void main(String[] args) {
+                System.out.println("Hello, Java!");
             }
-        </code>
-        <!-- Copy Code Button and Javascript will be added.-->
-    </pre>
+        }
+    </code></pre>
     </article>
-    <article class="main-article" id="Printing_to_the_console"">
+    <article class="main-article" id="Printing_to_the_console">
       <header>Printing to the console</header>
       <p>
         In Java, you can use the System.out.println() statement to print text to the console. This statement is commonly used for displaying messages, variables, or any information during the execution of a Java program.
@@ -66,16 +65,14 @@
     <p>
       Here's a simple example: </p>
 
-      <pre>
-      <code>
+      <pre><code class="java">
           public class ConsolePrintingExample {
               public static void main(String[] args) {
                   String message = "Hello, Java Console!";
                   System.out.println(message);
               }
           }
-      </code>
-    </pre>
+      </code></pre>
       <p>When you run this program, it will print the message "Hello, Java Console!" to the console.</p>
     </article>
     <article class="main-article" id="Declaring_Functions">
@@ -97,8 +94,7 @@
 
     <p>
         Here's a simple example of a Java class demonstrating OOP concepts:</p>
-        <pre>
-        <code>
+        <pre><code class="java">
           public class Animal {
               String name;
 
@@ -110,11 +106,14 @@
                   System.out.println("Some generic animal sound");
               }
           }
-      </code>
-    </pre>
+      </code></pre>
     <p>In this example, the "Animal" class encapsulates the data (name) and behavior (makeSound method). You can then create instances of this class, representing specific animals, and extend it to create more specialized classes using inheritance.
     </p>
     </article>
   </main>
 </div>
+
+<!-- Highlight.js JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 @endsection
