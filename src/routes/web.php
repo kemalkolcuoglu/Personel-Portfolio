@@ -46,3 +46,7 @@ Route::delete('/admin/deleteCategory/{id}', [AdminController::class, 'deleteCate
 Route::get('/docpage/', function () {
     return view('docpage');
 });
+
+Route::get('/blogpage/', function() {
+    return view('blogpage');
+});

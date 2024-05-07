@@ -97,7 +97,7 @@
 </section>
 
 <section class="services" id="services">
-  <h2 class="heading">Blog</h2>
+  <h2 class="heading">Recent Blogs</h2>
 
   <div class="service-container">
     <div class="service-box">
