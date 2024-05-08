@@ -45,4 +45,22 @@ class BlogEntry extends Model
 
         return $newValue;
     }
+
+    public function parseHeaders() {
+        preg_match_all('/<h2>([A-Z].+)<\/h2>/', $this->content, $matches);
+        $this->attributes['headers'] = array();
+        if(count($matches[0]) > 0) {
+            foreach($matches[1] as $match) {
+                array_push($this->attributes['headers'], [
+                    'slug' => static::generateSlug($match),
+                    'title' => $match
+                ]);
+            }
+        }
+    }
+
+    public function parseAbstract(){
+        preg_match_all('/<p>(.*?)<\/p>/s', $this->content, $matches);
+        $this->attributes['abstract'] = $matches[1][0];
+    }
 }

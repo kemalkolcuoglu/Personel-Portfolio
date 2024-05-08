@@ -18,7 +18,8 @@ use App\Models\BlogEntry;
 */
 
 Route::get('/', function () {
-    return view('index');
+    $blogs = BlogEntry::where('is_active', true)->get();
+    return view('index', compact('blogs'));
 });
 
 Route::get('/admin/login', function() {
@@ -51,7 +52,7 @@ Route::get('/docpage/{slug}', function ($slug) {
     return view('docpage', compact('blog'));
 });
 
-Route::get('/blogpage/', function() {
+Route::get('/blog/', function() {
     $blogs = BlogEntry::where('is_active', true)->get();
     return view('blogpage', compact('blogs'));
 });

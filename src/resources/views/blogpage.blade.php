@@ -1,4 +1,7 @@
 @extends('layouts.layout')
+@php
+  $title = 'Blog'
+@endphp
 @push('styles')
 @endpush
 @push('scripts')
@@ -12,7 +15,6 @@ document.getElementById("more").addEventListener("click", function(){
         box.style.display = "block";
         more.style.display = "none";
     });
-
 })
 </script>
 @endpush
@@ -26,13 +28,18 @@ document.getElementById("more").addEventListener("click", function(){
       <a href="/docpage/{{\App\Models\BlogEntry::generateSlug($blog->title).'_'.$blog->id}}">
       <div class="service-info">
         <h4>{{ $blog->title }}</h4>
+        @php
+            $blog->parseAbstract();
+        @endphp
         <p>
-          {{ substr($blog->content, 0, 100) }}
+          {{ $blog->abstract }}
         </p>
         </a>
       </div>
-      @endforeach
     </div>
-  <button id= "more"  type="button" class="btn btn-primary more">Primary</button>
+    @endforeach
+  </div>
+  <br>
+  <button id= "more"  type="button" class="btn btn-primary more">Show More</button>
 </section>
 @endsection
