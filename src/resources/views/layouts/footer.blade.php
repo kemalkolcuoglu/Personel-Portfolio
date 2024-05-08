@@ -24,5 +24,5 @@
       <a href="/#contact">Contact</a>
     </li>
   </ul>
-  <p class="copyright">© Mehmet Tuna Selvi | Licenced with MIT</p>
+  <p class="copyright"><strong>Mehmet Tuna Selvi | Copyright &#169; {{\Carbon\Carbon::now()->format('Y')}}</strong></p>
 </footer>

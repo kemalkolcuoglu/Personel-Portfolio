@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
+use App\Models\BlogEntry;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,8 @@ use App\Http\Controllers\LoginController;
 */
 
 Route::get('/', function () {
-    return view('index');
+    $blogs = BlogEntry::where('is_active', true)->get();
+    return view('index', compact('blogs'));
 });
 
 Route::get('/admin/login', function() {
@@ -43,10 +45,18 @@ Route::put('/admin/updateCategory/{id}', [AdminController::class, 'updateCategor
 Route::delete('/admin/deleteCategory/{id}', [AdminController::class, 'deleteCategory'])->name('admin.deleteCategory')->middleware('auth');
 
 
-Route::get('/docpage/', function () {
-    return view('docpage');
+Route::get('/docpage/{slug}', function ($slug) {
+    $separetedValues = explode('_', $slug);
+    $id = $separetedValues[count($separetedValues)-1];
+    $blog = BlogEntry::find($id);
+    return view('docpage', compact('blog'));
 });
 
-Route::get('/blogpage/', function() {
-    return view('blogpage');
+Route::get('/blog/', function() {
+    $blogs = BlogEntry::where('is_active', true)->get();
+    return view('blogpage', compact('blogs'));
 });
+
+Route::post('/contact/feedback', [
+    \App\Http\Controllers\ContactController::class, 'feedback'
+])->name('contact.feedback');
