@@ -69,6 +69,12 @@ body {
   text-shadow: 0 0 25px var(--main-color);
 
 }
+ .service-box a{
+   color: black;
+ }
+ service-box a:visited{
+   color: black;
+ }
 
 .navbar a {
   font-size: 1.8rem;
@@ -494,6 +500,10 @@ span {
 .services h2 {
   margin-bottom: 5rem;
   color: white;
+}
+
+.services .btn {
+  margin-top: 25px;
 }
 
 .service-container {

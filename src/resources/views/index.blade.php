@@ -153,7 +153,11 @@
       </div>
     </div>
   </div>
+  <br>  
+<button type="button" class="btn btn-primary more">More Blog</button>
+
 </section>
+
 <section class="contact" id="contact">
   <h2 class="heading">Contact <span>Me</span></h2>
 

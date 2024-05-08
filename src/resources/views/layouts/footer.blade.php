@@ -12,16 +12,17 @@
       ><i class="bx bx-desktop"></i
     ></a>
   </div>
+
   <ul class="list">
     <li>
-      <a href="#services">Blog</a>
+      <a href="/#services">Blog</a>
     </li>
     <li>
-      <a href="#">About Me</a>
+      <a href="/#">About Me</a>
     </li>
     <li>
-      <a href="#contact">Contact</a>
+      <a href="/#contact">Contact</a>
     </li>
   </ul>
-  <p class="copyright">© Mehmet Tuna Selvi | Licenced with GNU</p>
+  <p class="copyright">© Mehmet Tuna Selvi | Licenced with MIT</p>
 </footer>

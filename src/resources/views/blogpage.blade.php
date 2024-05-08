@@ -81,7 +81,8 @@
       </div>
     </div>
   </div>
-  <button id= "more"  type="button" class="btn btn-primary more">Primary</button>
+  <br>
+  <button id= "more"  type="button" class="btn btn-primary more">Show more</button>
 
 </section>
 
@@ -98,9 +99,6 @@ document.getElementById("more").addEventListener("click", function(){
     }); 
   
 })
-
-
-
 </script>
 
 

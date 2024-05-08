@@ -11,6 +11,7 @@
 @section('body')
 <div class="doc-body">
   <nav id="navbar-doc">
+    <!-- TODO: hrefs don't target to actual heders. CSS adjustments requires -->
     <header class="title">Java Documentation</header>
     <ul>
       <li>
