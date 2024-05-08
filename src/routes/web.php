@@ -56,3 +56,7 @@ Route::get('/blog/', function() {
     $blogs = BlogEntry::where('is_active', true)->get();
     return view('blogpage', compact('blogs'));
 });
+
+Route::post('/contact/feedback', [
+    \App\Http\Controllers\ContactController::class, 'feedback'
+])->name('contact.feedback');

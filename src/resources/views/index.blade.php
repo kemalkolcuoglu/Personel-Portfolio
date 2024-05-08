@@ -1,6 +1,14 @@
 @extends('layouts.layout')
 @push('styles')
 @endpush
+@push('scripts')
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+    function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+    }
+</script>
+@endpush
 @section('body')
 <section class="home" id="home">
   <div class="home-content">
@@ -124,7 +132,7 @@
 <section class="contact" id="contact">
   <h2 class="heading">Contact <span>Me</span></h2>
 
-  <form action="">
+  <form action="{{route('contact.feedback')}}">
     <div class="input-group">
       <div class="input-box">
         <input type="text" placeholder="Full Name" />
@@ -142,6 +150,11 @@
         rows="10 place"
         placeholder="Your Message"
       ></textarea>
+      <button class="g-recaptcha"
+        data-sitekey="6LdfENYpAAAAAPAnZpEJF_R7L_DC48v0uEfyYM9V"
+        data-callback='onSubmit'
+        data-action='submit'>Submit
+      </button>
       <input type="submit" value="Send Message" class="btn" />
     </div>
   </form>
