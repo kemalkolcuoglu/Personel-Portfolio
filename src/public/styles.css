@@ -971,3 +971,7 @@ img {
   margin-top: 25px;
   margin-bottom: 25px;
 }
+
+.main-article div p img{
+  margin: 15px;
+}
