@@ -5,7 +5,6 @@
 @push('styles')
 @endpush
 @push('scripts')
-<!-- TODO: Dörderli gösterme ve show less eklenecek. -->
 <script>
 let more = document.getElementById("more");
 

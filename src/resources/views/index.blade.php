@@ -15,10 +15,7 @@
     <h1>Hey, It's <span>Tuna</span></h1>
     <h3 class="text-animation">I'm interested in <br /><span></span></h3>
     <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos at
-      provident aperiam. Odit similique maiores numquam? Molestiae aperiam
-      ab eum sunt fuga iure mollitia itaque provident earum? Facere, labore
-      quod?
+    I'm dedicated to focusing my career on web development, aiming to strengthen my fundamental principles in disciplines such as Penetration Testing, System Engineering, Operating Systems, and Network Associating. While working on every projects, I aim to develop my technical skills, emphasizing my openness to continuous learning and improvement. Additionally, I'm interested in DevOps tools, aspiring to actively contribute to emerging technology trends.
     </p>
     <div class="social-icons">
       <a
@@ -56,9 +53,7 @@
       <div class="timeline-content">
         <h3>High School</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-          sed ratione perspiciatis quaerat ullam repellendus reiciendis
-          illum nesciunt optio nemo.
+          Beside of core high school education, I actively participated in a cultural exchange program involving students from pilot schools in Norway, Belgium, and Turkey.Together, we conducted research on the philosophers and cultural values of each participating country. As part of this student exchange program, each participant hosted a student from another country in their own country, and we increased cultural solidarity and understanding. Alongside, I was a licenced chess player during high schol years and interested in all areas of sports and philosophy and continued to develop.
         </p>
       </div>
     </div>
@@ -69,9 +64,8 @@
       <div class="timeline-content">
         <h3>University</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-          sed ratione perspiciatis quaerat ullam repellendus reiciendis
-          illum nesciunt optio nemo.
+          Throughout my university years,  the functionality of the academic subjects
+          I took, extended beyond theoretical knowledge, providing me with practical skills needed to solve real-world problems. Particularly, by participating in student communitys such as Fırat ACM (Association for Computing Machinery) and Fırat IEEE (Institute of Electrical and Electronics Engineer)  I deepened my knowledge in computer engineering and soft skills as well. Additionally, I succeed the courses I took which are proficiency in German (pre intermediate) and English (intermediate), I am confident in my ability to communicate effectively in international offers. These experiences laid a solid foundation, preparing me for my post-graduation career.
         </p>
       </div>
     </div>
@@ -82,9 +76,11 @@
       <div class="timeline-content">
         <h3>Hardware Internship</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-          sed ratione perspiciatis quaerat ullam repellendus reiciendis
-          illum nesciunt optio nemo.
+          <b>08/2020 - 09/2020</b>
+          Under the coordination of Prof. Dr. Yetkin TATAR at Hardware Department of Fırat University, I completed a one-month internship in field of Cyber Security and Ethical Hacking, covering Penetration Testing, System Security Scanning, System Design and Installation. During this internship, I gained insights into the concepts of professional network penetration testing, the interpretation of analysis results, and specifically delved into the concepts of WireShark and NMap software tools.
+          <strong>Technologies Used:</strong>
+          <br>
+          <p>GNS3, VMware, Kali Linux, Bash Scripting, Nmap, Wireshark, and Nessus</p>
         </p>
       </div>
     </div>
@@ -95,9 +91,11 @@
       <div class="timeline-content">
         <h3>Software Internship</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-          sed ratione perspiciatis quaerat ullam repellendus reiciendis
-          illum nesciunt optio nemo.
+          <b>07/2022 - 08/2022</b>
+        I completed a one-month internship at IM Park Bilişim in OSTIM ODTÜ Technopark. During this internship, I was involved in creating the abstract of a dynamically structured website developed in ASP.NET architecture with MVC pattern. The company focuses on educational technologies, particularly in the areas of web, mobile, and artificial intelligence, aiming for educational efficiency.
+        <strong>Technologies Used:</strong>
+        <br>
+        <p>C#, ASP.NET, Razor Page, ADO.NET, jQuery, Bootstrap, HTML, CSS, Entity Framework</p>
         </p>
       </div>
     </div>
