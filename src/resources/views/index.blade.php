@@ -133,20 +133,19 @@
   <form action="{{route('contact.feedback')}}">
     <div class="input-group">
       <div class="input-box">
-        <input type="text" placeholder="Full Name" />
-        <input type="email" placeholder="e-mail" />
-
-        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="Phone Number" />
-        <input type="text" placeholder="Subject" />
+        <input type="text" placeholder="Full Name" name="feedbackName" required />
+        <input type="email" placeholder="E-mail" name="feedbackEmail" required />
+        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone Number" name="feedbackPhone" required  />
+        <input type="text" placeholder="Subject" name="feedbackSubject" required />
       </div>
     </div>
     <div class="input-group2">
       <textarea
-        name=""
-        id=""
+        name="feedbackMessage"
         cols="30"
         rows="10 place"
         placeholder="Your Message"
+        required
       ></textarea>
       <button class="g-recaptcha"
         data-sitekey="6LdfENYpAAAAAPAnZpEJF_R7L_DC48v0uEfyYM9V"
