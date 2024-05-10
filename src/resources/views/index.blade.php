@@ -53,7 +53,7 @@
       <div class="timeline-content">
         <h3>High School</h3>
         <p>
-          Beside of core high school education, I actively participated in a cultural exchange program involving students from pilot schools in Norway, Belgium, and Turkey.Together, we conducted research on the philosophers and cultural values of each participating country. As part of this student exchange program, each participant hosted a student from another country in their own country, and we increased cultural solidarity and understanding. Alongside, I was a licenced chess player during high schol years and interested in all areas of sports and philosophy and continued to develop.
+          Beside of core high school education, I actively participated in a cultural exchange program involving students from pilot schools in Norway, Belgium, and Turkey. Together, we conducted research on the philosophers and cultural values of each participating country. As part of this student exchange program, each participant hosted a student from another country in their own country, and we increased cultural solidarity and understanding. Alongside, I was a licenced chess player during high schol years and interested in all areas of sports and philosophy and continued to develop.
         </p>
       </div>
     </div>
@@ -76,8 +76,9 @@
       <div class="timeline-content">
         <h3>Hardware Internship</h3>
         <p>
-          <b>08/2020 - 09/2020</b>
+          <b>08/2020 - 09/2020</b><br>
           Under the coordination of Prof. Dr. Yetkin TATAR at Hardware Department of Fırat University, I completed a one-month internship in field of Cyber Security and Ethical Hacking, covering Penetration Testing, System Security Scanning, System Design and Installation. During this internship, I gained insights into the concepts of professional network penetration testing, the interpretation of analysis results, and specifically delved into the concepts of WireShark and NMap software tools.
+          <br><br>
           <strong>Technologies Used:</strong>
           <br>
           <p>GNS3, VMware, Kali Linux, Bash Scripting, Nmap, Wireshark, and Nessus</p>
@@ -91,8 +92,9 @@
       <div class="timeline-content">
         <h3>Software Internship</h3>
         <p>
-          <b>07/2022 - 08/2022</b>
+          <b>07/2022 - 08/2022</b><br>
         I completed a one-month internship at IM Park Bilişim in OSTIM ODTÜ Technopark. During this internship, I was involved in creating the abstract of a dynamically structured website developed in ASP.NET architecture with MVC pattern. The company focuses on educational technologies, particularly in the areas of web, mobile, and artificial intelligence, aiming for educational efficiency.
+        <br><br>
         <strong>Technologies Used:</strong>
         <br>
         <p>C#, ASP.NET, Razor Page, ADO.NET, jQuery, Bootstrap, HTML, CSS, Entity Framework</p>
@@ -133,20 +135,19 @@
   <form action="{{route('contact.feedback')}}">
     <div class="input-group">
       <div class="input-box">
-        <input type="text" placeholder="Full Name" />
-        <input type="email" placeholder="e-mail" />
-
-        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="Phone Number" />
-        <input type="text" placeholder="Subject" />
+        <input type="text" placeholder="Full Name" name="feedbackName" required />
+        <input type="email" placeholder="E-mail" name="feedbackEmail" required />
+        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone Number" name="feedbackPhone" required  />
+        <input type="text" placeholder="Subject" name="feedbackSubject" required />
       </div>
     </div>
     <div class="input-group2">
       <textarea
-        name=""
-        id=""
+        name="feedbackMessage"
         cols="30"
         rows="10 place"
         placeholder="Your Message"
+        required
       ></textarea>
       <button class="g-recaptcha"
         data-sitekey="6LdfENYpAAAAAPAnZpEJF_R7L_DC48v0uEfyYM9V"
