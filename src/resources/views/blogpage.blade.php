@@ -24,12 +24,9 @@ document.getElementById("more").addEventListener("click", function(){
   <div class="service-container">
     @foreach($blogs as $blog)
     <div class="service-box">
-      <a href="/docpage/{{\App\Models\BlogEntry::generateSlug($blog->title).'_'.$blog->id}}">
+      <a href="/docpage/{{\App\Models\BlogEntry::generateSlug($blog->title).'-'.$blog->id}}">
       <div class="service-info">
         <h4>{{ $blog->title }}</h4>
-        @php
-            $blog->parseAbstract();
-        @endphp
         <p>
           {{ $blog->abstract }}
         </p>

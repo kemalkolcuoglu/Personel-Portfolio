@@ -1,17 +1,14 @@
 @extends('layouts.layout')
 @php
   $blog->parseHeaders();
-  $blog->parseAbstract();
   $title = $blog->title;
 @endphp
 @push('styles')
-<!-- Highlight.js CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
 @endpush
 @push('scripts')
-<!-- Highlight.js JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script>hljs.highlightAll();</script>
 @endpush
 @section('body')
 <div class="doc-body">
@@ -26,7 +23,10 @@
   <main id="main-doc" >
     <article class="main-article" id="Getting_Started_With_Java">
       <header>{{ $blog->title }}</header>
-      {!! $blog->content !!}
+      <h3><b>Category:</b> {{ $blog->relatedCategory->title }}</h3>
+      <h3><b>Publish Date:</b> {{ $blog->created_at->format('d/m/Y') }}</h3>
+      <hr />
+      {!! Parsedown::instance()->text($blog->content) !!}
     </article>
   </main>
 </div>

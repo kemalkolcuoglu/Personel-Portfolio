@@ -32,6 +32,7 @@ class AdminController extends Controller
             $entry['title'] = $request->title;
             $entry['category'] = $request->category;
             $entry['seo_description'] = $request->seo_description;
+            $entry['abstract'] = $request->abstract;
             $entry['content'] = $request->content;
             $entry['is_active'] = $request->is_active ? true : false;
 
@@ -47,11 +48,7 @@ class AdminController extends Controller
 
             return redirect(route('admin.index'))->with('success', 'Success!');
         } catch(Exception $exp) {
-            ddd([
-                'request' => $request,
-                'exp' => $exp
-            ]);
-            return redirect()->back()->with('error', 'Öhüü!');
+            return redirect()->back()->with('error', 'Fail!');
         }
     }
 
@@ -74,6 +71,7 @@ class AdminController extends Controller
             $entry['title'] = $request->title;
             $entry['category'] = $request->category;
             $entry['seo_description'] = $request->seo_description;
+            $entry['abstract'] = $request->abstract;
             $entry['content'] = $request->content;
             $entry['is_active'] = $request->is_active ? true : false;
 
@@ -91,10 +89,6 @@ class AdminController extends Controller
 
             return redirect(route('admin.index'));
         } catch(Exception $exp) {
-            ddd([
-                'request' => $request,
-                'exp' => $exp
-            ]);
             return redirect()->back();
         }
     }
@@ -125,10 +119,6 @@ class AdminController extends Controller
 
             return redirect(route('admin.categories'))->with('success', 'Success!');
         } catch(Exception $exp) {
-            ddd([
-                'request' => $request,
-                'exp' => $exp
-            ]);
             return redirect()->back()->with('error', 'Öhüü!');
         }
     }
@@ -150,10 +140,6 @@ class AdminController extends Controller
 
             return redirect(route('admin.categories'))->with('success', 'Success!');
         } catch(Exception $exp) {
-            ddd([
-                'request' => $request,
-                'exp' => $exp
-            ]);
             return redirect()->back()->with('error', 'Öhüü!');
         }
     }
