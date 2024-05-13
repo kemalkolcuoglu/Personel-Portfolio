@@ -1,26 +1,10 @@
 @extends('layouts.adminlayout')
 @push('styles')
+<link rel="stylesheet" href="/vendor/editormd/editormd.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" integrity="sha512-XJ3ntWHl40opEiE+6dGhfK9NAKOCELrpjiBRQKtu6uJf9Pli8XY+Hikp7rlFzY4ElLSFtzjx9GGgHql7PLSeog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endpush
 @push('scripts')
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
-<script>
-  $('#content').summernote({
-    placeholder: 'Tuna\'s Cool Text Editor',
-    tabsize: 2,
-    height: 480,
-    toolbar: [
-      ['style', ['style']],
-      ['font', ['bold', 'underline', 'clear']],
-      ['color', ['color']],
-      ['para', ['ul', 'ol', 'paragraph']],
-      ['table', ['table']],
-      ['insert', ['link', 'picture', 'video']],
-      ['view', ['fullscreen', 'codeview', 'help']]
-    ]
-  });
-</script>
+@include('components.editormd')
 @endpush
 @section('content')
   <div class="container">
@@ -48,8 +32,14 @@
         <input type="text" class="form-control" id="tags" name="tags">
       </div>
       <div class="form-group">
+        <label for="abstract">Abstract</label>
+        <input type="text" class="form-control" id="abstract" name="abstract">
+      </div>
+      <div class="form-group">
         <label for="content">Content</label>
-        <textarea class="form-control" id="content" name="content" rows="3"></textarea>
+        <div id="text-editor">
+          <textarea class="form-control" id="content" name="content" rows="3"></textarea>
+        </div>
       </div>
       <div class="form-group col-md-6">
         <div class="form-check">

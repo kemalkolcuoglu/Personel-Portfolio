@@ -43,6 +43,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('admin.index') }}">Blog Entries</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('index') }}">Return to Homepage</a>
+              </li>
               <li class="nav-item dropdown">
                 <a
                   id="navbarDropdown"

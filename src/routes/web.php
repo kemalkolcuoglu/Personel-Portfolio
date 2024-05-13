@@ -20,7 +20,7 @@ use App\Models\BlogEntry;
 Route::get('/', function () {
     $blogs = BlogEntry::where('is_active', true)->get();
     return view('index', compact('blogs'));
-});
+})->name('index');
 
 Route::get('/admin/login', function() {
     return view('auth.login');
@@ -46,7 +46,7 @@ Route::delete('/admin/deleteCategory/{id}', [AdminController::class, 'deleteCate
 
 
 Route::get('/docpage/{slug}', function ($slug) {
-    $separetedValues = explode('_', $slug);
+    $separetedValues = explode('-', $slug);
     $id = $separetedValues[count($separetedValues)-1];
     $blog = BlogEntry::find($id);
     return view('docpage', compact('blog'));

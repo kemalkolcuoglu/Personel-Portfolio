@@ -19,7 +19,7 @@
         @foreach($categories as $category)
         <tr>
           <th scope="row">{{ $category['id'] }}</th>
-          <td>{{ $category['base_category'] }}</td>
+          <td>{{ $category['base_category'] == 0 ? "Base" : $category['base_category'] }}</td>
           <td>{{ $category['title'] }}</td>
           <td>{{ $category['is_active'] == true ? 'Active' : 'Passive' }}</td>
           <td><a href="{{ route('admin.editCategory', $category['id']) }}">Edit</td>
