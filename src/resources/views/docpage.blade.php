@@ -22,11 +22,15 @@
   </nav>
   <main id="main-doc" >
     <article class="main-article" id="Getting_Started_With_Java">
+      <ul class="breadcrumb">
+        <li>Blog Entries</li>
+        <li><b>Category:</b> {{ $blog->relatedCategory->title }}</li>
+      </ul>
       <header>{{ $blog->title }}</header>
-      <h3><b>Category:</b> {{ $blog->relatedCategory->title }}</h3>
-      <h3><b>Publish Date:</b> {{ $blog->created_at->format('d/m/Y') }}</h3>
+      <h5><b>Publish Date:</b> {{ $blog->created_at->format('d/m/Y') }}</h5>
       <hr />
       {!! Parsedown::instance()->text($blog->content) !!}
+      <hr />
     </article>
   </main>
 </div>
