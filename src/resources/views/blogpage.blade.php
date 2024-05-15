@@ -20,21 +20,7 @@ document.getElementById("more").addEventListener("click", function(){
 @section('body')
 <section class="services" id="services">
   <h2 class="heading"> All Blogs</h2>
-
-  <div class="service-container">
-    @foreach($blogs as $blog)
-    <div class="service-box">
-      <a href="/docpage/{{\App\Models\BlogEntry::generateSlug($blog->title).'-'.$blog->id}}">
-      <div class="service-info">
-        <h4>{{ $blog->title }}</h4>
-        <p>
-          {{ $blog->abstract }}
-        </p>
-        </a>
-      </div>
-    </div>
-    @endforeach
-  </div>
+  @include('components.blog-service-container')
   <br>
   <button id= "more"  type="button" class="btn btn-primary more">Show More</button>
 </section>

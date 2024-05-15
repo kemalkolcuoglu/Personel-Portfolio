@@ -69,9 +69,9 @@ body {
 
 .badges-container {
   display: flex;
-  justify-content: start; 
-  flex-direction: row-reverse; 
-  flex-wrap: wrap; 
+  justify-content: start;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
   margin-left: 4%;
   margin-top: 2%;
 }
@@ -1028,4 +1028,33 @@ img {
 
 .main-article h2{
     margin: 20px;
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;
+  background-color:var(--doc-main-color);
+  height: 1px;
+}
+
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: var(--doc-second-bg-color);
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+  color: var(--doc-main-color);
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: white;
+  content: "/\00a0";
 }
