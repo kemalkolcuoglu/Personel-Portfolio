@@ -65,8 +65,33 @@ body {
   -o-transform: scale(1.1);
 }
 
+
+
+.badges-container {
+  display: flex;
+  justify-content: start; 
+  flex-direction: row-reverse; 
+  flex-wrap: wrap; 
+  margin-left: 4%;
+  margin-top: 2%;
+}
+
+.badge {
+  font-size: 1.5vh;
+  background-color: var(--doc-code-bg-color);
+  color: var(--text-color);
+  padding: 5px 10px;
+  margin-left: 5px;
+  border: 1px solid dotted red;
+  box-shadow: 0 0 5px red;
+  border-radius:20px;
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  -ms-border-radius:20px;
+  -o-border-radius:20px;
+}
 .logo span {
-  text-shadow: 0 0 25px var(--main-color);
+  text-shadow: 0 0 25px var(--doc-code-bg-color);
 
 }
  .service-box a{

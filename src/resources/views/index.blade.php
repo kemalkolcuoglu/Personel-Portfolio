@@ -108,16 +108,35 @@
   <h2 class="heading">Recent Blogs</h2>
 
   <div class="service-container">
+  
     @foreach($blogs as $blog)
     <div class="service-box">
+    
+    
       <a href="/docpage/{{\App\Models\BlogEntry::generateSlug($blog->title).'-'.$blog->id}}">
       <div class="service-info">
+      
         <h4>{{ $blog->title }}</h4>
         <p>
           {{ $blog->abstract }}
+          
         </p>
+        
         </a>
+        
       </div>
+      <div class="badges-container">
+          
+          <span class="badge">Network</span>
+          <span class="badge">Linux</span>
+          <span class="badge">GNS3</span>
+          <span class="badge">optimization</span>
+          <span class="badge">Network</span>
+          <span class="badge">Linux</span>
+          <span class="badge">GNS3</span>
+          <span class="badge">optimization</span>
+          
+          </div>
     </div>
     @endforeach
   </div>
