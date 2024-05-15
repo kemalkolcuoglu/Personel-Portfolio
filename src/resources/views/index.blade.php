@@ -126,7 +126,6 @@
         
       </div>
       <div class="badges-container">
-          
           <span class="badge">Network</span>
           <span class="badge">Linux</span>
           <span class="badge">GNS3</span>
